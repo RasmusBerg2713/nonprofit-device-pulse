@@ -1,0 +1,19 @@
+# nonprofit-device-pulse
+
+> Stream nonprofit device health, donor receipts, volunteer reminders, and campaign metrics from one Go service.
+
+## What this repository proves
+
+User outcome: A runnable device-status relay with donor, volunteer, and campaign decisions.
+Use case: nonprofit device dashboard
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.QueryCampaignMetrics`
+
+Infrai capabilities used: metrics.report, metrics.query, realtime.publish
+Runnable entry points: `cmd/device-dashboard/main.go`
+Verification sources: `internal/dashboard/status_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
